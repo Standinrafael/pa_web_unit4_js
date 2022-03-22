@@ -29,7 +29,7 @@ public class PaWebUnit4JsApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 
-		long inicio = System.currentTimeMillis();
+//		long inicio = System.currentTimeMillis();
 
 		// Procesamiento asincrono pero sin manejo de respuesta por cada hilo
 
@@ -42,19 +42,19 @@ public class PaWebUnit4JsApplication implements CommandLineRunner {
 
 		// Procesamiento asincrono pero sin manejo de respuesta por cada hilo
 
-		CompletableFuture<Integer> valor1 = this.facultadService.calcularDeudaFuture("123", 4);
-		CompletableFuture<Integer> valor2 = this.facultadService.calcularDeudaFuture("456", 4);
-		CompletableFuture<Integer> valor3 = this.facultadService.calcularDeudaFuture("789", 4);
-		CompletableFuture<Integer> valor4 = this.facultadService.calcularDeudaFuture("111", 4);
-
-		// Sentencia que espera que terminen de procesar todos los hilos
-		CompletableFuture.allOf(valor1, valor2, valor3, valor4).join();
-
-		// Esperar que se procesen toos los hilos
-		LOG.info("Total: " + (valor1.get() + valor2.get() + valor3.get() + valor4.get()));
-		long tFinal = System.currentTimeMillis();
-		long tiempoTranscurrido = (tFinal - inicio) / 1000;
-		LOG.info(tiempoTranscurrido + " seg");
+//		CompletableFuture<Integer> valor1 = this.facultadService.calcularDeudaFuture("123", 4);
+//		CompletableFuture<Integer> valor2 = this.facultadService.calcularDeudaFuture("456", 4);
+//		CompletableFuture<Integer> valor3 = this.facultadService.calcularDeudaFuture("789", 4);
+//		CompletableFuture<Integer> valor4 = this.facultadService.calcularDeudaFuture("111", 4);
+//
+//		// Sentencia que espera que terminen de procesar todos los hilos
+//		CompletableFuture.allOf(valor1, valor2, valor3, valor4).join();
+//
+//		// Esperar que se procesen toos los hilos
+//		LOG.info("Total: " + (valor1.get() + valor2.get() + valor3.get() + valor4.get()));
+//		long tFinal = System.currentTimeMillis();
+//		long tiempoTranscurrido = (tFinal - inicio) / 1000;
+//		LOG.info(tiempoTranscurrido + " seg");
 	}
 
 }

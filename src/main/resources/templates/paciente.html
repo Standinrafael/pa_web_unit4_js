@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+</head>
+
+
+
+<body>
+	<table>
+		<!--Fila del ID-->
+		<tr>
+			<td th:text="'ID:'" />
+			<td th:text="${paci.id}" />
+		</tr>
+		<!--Fila de la Cedula-->
+		<tr>
+			<td th:text="'Cedula:'" />
+			<td th:text="${paci.cedula}" />
+		</tr>
+		<!--Fila del Nombre-->
+		<tr>
+			<td th:text="'Nombre:'" />
+			<td th:text="${paci.nombre}" />
+		</tr>
+		<!--Fila del Apellido-->
+		<tr>
+			<td th:text="'Apellido:'" />
+			<td th:text="${paci.apellido}" />
+		</tr>
+		<!--Fila del Genero-->
+		<tr>
+			<td th:text="'Genero:'" />
+			<td th:text="${paci.genero}" />
+		</tr>
+		<!--Fila del Numero del IESS-->
+		<tr>
+			<td th:text="'Apellido:'" />
+			<td th:text="${paci.numeroIess}" />
+		</tr>
+	</table>
+</body>
+
+
+
+</html>

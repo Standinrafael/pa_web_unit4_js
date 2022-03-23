@@ -23,6 +23,17 @@ public class Estudiante {
 	
 	@Column(name="estu_apellido")
 	private String apellido;
+	
+	public Estudiante() {
+		
+	}
+
+	public Estudiante(Integer id, String nombre, String apellido) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
 
 	//Metodos Get y SET
 	public Integer getId() {
